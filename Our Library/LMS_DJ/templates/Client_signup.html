@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS | client-signup</title>
+</head>
+<body>
+    {%extends 'base.html'%}
+
+    {% block content %}
+    <h1>Client Sign-up</h1>
+    <form method="post">
+
+        {% csrf_token %}
+        Enter Username : <input type="text" name="username"><br>
+        {{a}}
+        Enter password : <input type="password" name="password"><br>
+        Enter First Name : <input type="text" name="first_name"><br>
+        Enter Last Name : <input type="text" name="last_name"><br>
+        Enter your mis : <input type="text" name="mis"><br>
+        Enter Branch : <input type="text" name="branch"><br>
+        Enter college email-id : <input type="text" name="college_email"><br>
+        Enter mobile-no : <input type="text" name="mobile_no"><br>
+        confirm : <input type="text" name="confirm" value = "Y/N"><br>
+        <button type="submit" name = "clt_signup" formaction="client_lgn">Sign-up</button>
+    </form>
+    {%endblock%}
+</body>
+</html>

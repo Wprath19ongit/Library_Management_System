@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS | client options</title>
+</head>
+<body>
+    {%extends "base.html"%}
+    
+    {% block content %}
+
+    <h1>Library Management System</h1>
+    <form method="post">
+
+        {% csrf_token %}
+        
+        <button type="submit" formaction="view_books">View books</button>
+        <button type="submit" formaction="search_books">Search books</button>
+        <button type="submit" formaction="update_client_info">update info</button>
+        <button type="submit" formaction="book_history_client">check book history</button>
+
+
+    </form>
+    {%endblock%}
+</body>
+</html>

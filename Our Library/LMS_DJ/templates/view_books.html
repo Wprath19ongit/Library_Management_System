@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS | view books/title>
+</head>
+<body>
+    {%extends 'base.html'%}
+
+    {% block content %}
+    <h1>View Our books</h1>
+
+    {% for i in records %}
+    Name:{{i[1]}}
+    Id:{{i[4]}}
+    {% endfor %}
+
+    {%for i in record:
+        print('\n'+str(i[0])+')      book:',i[1])
+        {'a':str(i[0])}
+        {'records':record}
+        print('\n\tAuthor1:',i[2])
+        print('\n\tAuthor2:',i[3])
+        print('\n\tAuthor3:',i[4])
+        print('\n\tBook_id:',i[5])
+        print('\n\tAvalability status:',i[6])%}
+
+
+    {{records}}
+    <br>
+ 
+    {%endblock%}
+</body>
+</html>

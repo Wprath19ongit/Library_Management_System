@@ -1,0 +1,48 @@
+
+# 1 database- library.db
+# Tables-
+# 1) client_info - first_name, last_name, mis, branch, college_email, mobile_no, book1, date_of_issue1, date_of_return1, book2, date_of_issue_1, date_of_return_2
+# 2) admin_info - first_name, last_name, college_email, mobile_no.
+# 3) books - book_name, author1, author2, author3, book_id, availability
+
+# what can client do-
+#   a) browse through books in book table by typing (book_name/author1/author2/author3/book_id) and check availability
+#   b) (this happens physically)If available, can request issue if(at least one book column in his row in client_info table is null).
+#   c) update personal info
+
+# what can admin do-
+#   a) browse through books in book table by typing (book_name/author1/author2/author3/book_id) and check availability
+#   b) Can issue book to client if requested (adding book_id to book1/book2 column)
+#   c) enhance client_info table and add/remove other admins to admin_table
+#   d) update personal info
+
+# functions-
+# a) on runing program-
+#   1) admin login
+#   2) client sign-up/login
+# 
+# b) Client sign-up-
+#   1) adding all info to client_info (also check if already signed-up)
+# 
+# c) Client after sign-in-
+#   1) browse through books
+#   2) update personal info
+#
+# d) admin after sign-in-
+#   1) update personal info
+#   2) Add admins
+#   3) browse through books
+#   4) issue book to client - simply adding book_id, adding date_of_issue to client_info table toggle availability at books table
+#   5) Taking back book from client - removing book_id, adding date_of_return 
+#   
+
+# from multiprocessing import connection
+# import sqlite3
+# import time
+# import random
+
+
+# connection = sqlite3.Connection("library.db")
+# csr1 = connection.cursor()
+
+# csr1.execute("CREATE TABLE books(book text, bookid text)")
